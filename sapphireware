@@ -1,0 +1,82 @@
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+local Rayfield = loadstring(game: HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "SapphireWare (Fisch Edition)",
+   Icon = 99999842779652, --Icon in Topbar.Can use Lucide Icons(string) or Roblox Image(number). 0 to use no icon(default).
+   LoadingTitle = "Mango mango mango mango mango sturdy 😭🙏",
+   LoadingSubtitle = "by Headbreaker and 9xpc",
+   Theme = "Serenity", --Check https://docs.sirius.menu/rayfield/configuration/themes
+
+    Discord = {
+        Enabled = true,
+       Invite = "a4nAxYz2rt", --The Discord invite code, do not include discord.gg /.E.g.discord.gg / ABCD would be ABCD
+       RememberJoins = false-- Set this to false to make them join the discord every time they load it up
+    },
+
+    DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, --Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+    Enabled = true,
+      FolderName = nil, --Create a custom folder for your hub/ game
+      FileName = "Big Hub"
+   },
+
+
+
+   KeySystem = true, --Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "Join da discord for key!1!!", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"IHateNiggers123", "OwnerFriendsKeyLmfao111z", } --List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+
+   }
+})
+
+local FischTab = Window:CreateTab("Fisch", 4483362458)-- Title, Image
+
+local Button = Tab:CreateButton({
+    Name = "Hidden",
+   Callback = function()
+   loadstring(game: HttpGet("https://raw.githubusercontent.com/tulontop/HiddenRevamp/refs/heads/main/Loader.luau"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Native",
+   Callback = function()
+   (loadstring or load)(game: HttpGet("https://raw.githubusercontent.com/Native-lab/Native/main/loader.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Speed Hub X",
+   Callback = function()
+   loadstring(game: HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "KiciaHook",
+   Callback = function()
+   loadstring(game: HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "BlackHub (keyless)",
+   Callback = function()
+   getgenv().key = "Nexsie"
+   loadstring(game: HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
+   end,
+})
+
